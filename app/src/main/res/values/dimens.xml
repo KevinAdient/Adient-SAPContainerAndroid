@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+
+    <dimen name="large_title_textsize">22sp</dimen>
+    <dimen name="title_textsize">20sp</dimen>
+    <dimen name="large_textsize">18sp</dimen>
+    <dimen name="medium_textsize">16sp</dimen>
+    <dimen name="little_small_textsize">14sp</dimen>
+    <dimen name="ltl_small_textsize">14.5sp</dimen>
+    <dimen name="ltl_sml_textsize">13.5sp</dimen>
+    <dimen name="small_textsize">12sp</dimen>
+    <dimen name="more_small_textsize">10sp</dimen>
+    </resources>
