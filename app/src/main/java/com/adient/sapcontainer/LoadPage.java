@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -29,14 +31,25 @@ public class LoadPage extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setSupportZoom(false);
 
+        //CookieSyncManager.createInstance(this);
+        //it is default true, but hey...
+        //CookieManager.getInstance().setAcceptCookie(true);
+
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
+        webView.getSettings().setSupportZoom(true);
+
+
         Intent intent=getIntent();
         String pos=intent.getStringExtra("grade");
 
         if(pos.equals("Supplier Quality Dashboard")){
-           webView.loadUrl("https://agsm.adient.com/siteminderagent/forms/ag_primary.fcc?TYPE=33554433&REALMOID=06-ee9a9733-4a38-4ee7-95c9-7fe1801058c2&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=8yUsyDSZUFV1o873Kdzm1dYMiJFJF9ekwOP8E9bnkUGqJ5Nn4Wg6ke9iIkL8xSYH&TARGET=-SM-HTTPS%3a%2f%2fbiprod%2eadient%2ecom%2fBOE%2fOpenDocument%2fopendoc%2fopenDocument%2ejsp%3fsIDType%3dCUID%26iDocID%3dAcQWMlBUGSVPs5ELyCwz9Nw");
+           //webView.loadUrl("https://agsm.adient.com/siteminderagent/forms/ag_primary.fcc?TYPE=33554433&REALMOID=06-ee9a9733-4a38-4ee7-95c9-7fe1801058c2&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=8yUsyDSZUFV1o873Kdzm1dYMiJFJF9ekwOP8E9bnkUGqJ5Nn4Wg6ke9iIkL8xSYH&TARGET=-SM-HTTPS%3a%2f%2fbiprod%2eadient%2ecom%2fBOE%2fOpenDocument%2fopendoc%2fopenDocument%2ejsp%3fsIDType%3dCUID%26iDocID%3dAcQWMlBUGSVPs5ELyCwz9Nw");
+            webView.loadUrl("http://biprod.adient.com/BOE/OpenDocument/opendoc/openDocument.jsp?sIDType=CUID&iDocID=AcQWMlBUGSVPs5ELyCwz9Nw");
         }
         else if(pos.equals("Operations Dashboard")){
-            webView.loadUrl("https://agsm.adient.com/siteminderagent/forms/ag_primary.fcc?TYPE=33554433&REALMOID=06-ee9a9733-4a38-4ee7-95c9-7fe1801058c2&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=8yUsyDSZUFV1o873Kdzm1dYMiJFJF9ekwOP8E9bnkUGqJ5Nn4Wg6ke9iIkL8xSYH&TARGET=-SM-HTTPS%3a%2f%2fbiprod%2eadient%2ecom%2fBOE%2fOpenDocument%2fopendoc%2fopenDocument%2ejsp%3fsIDType%3dCUID%26iDocID%3dAcD8UbmaXElBlgKf7N3UMzI");
+            webView.loadUrl("http://biprod.adient.com/BOE/OpenDocument/opendoc/openDocument.jsp?sIDType=CUID&iDocID=AcD8UbmaXElBlgKf7N3UMzI");
+            //webView.loadUrl("https://agsm.adient.com/siteminderagent/forms/ag_primary.fcc?TYPE=33554433&REALMOID=06-ee9a9733-4a38-4ee7-95c9-7fe1801058c2&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=8yUsyDSZUFV1o873Kdzm1dYMiJFJF9ekwOP8E9bnkUGqJ5Nn4Wg6ke9iIkL8xSYH&TARGET=-SM-HTTPS%3a%2f%2fbiprod%2eadient%2ecom%2fBOE%2fOpenDocument%2fopendoc%2fopenDocument%2ejsp%3fsIDType%3dCUID%26iDocID%3dAcD8UbmaXElBlgKf7N3UMzI");
         }
         else if(pos.equals("Select One")){
             finish();
