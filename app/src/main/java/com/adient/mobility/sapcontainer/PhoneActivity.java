@@ -1,16 +1,17 @@
-package com.adient.sapcontainer;
+package com.adient.mobility.sapcontainer;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.digits.sdk.android.*;
 import com.digits.sdk.android.DigitsException;
+import com.eggheadgames.siren.Siren;
+import com.eggheadgames.siren.SirenAlertType;
+import com.eggheadgames.siren.SirenVersionCheckType;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterCore;
 import io.fabric.sdk.android.Fabric;
@@ -23,7 +24,7 @@ public class PhoneActivity extends AppCompatActivity{
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-
+    private static final String SIREN_JSON_DOCUMENT_URL = " ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,9 @@ public class PhoneActivity extends AppCompatActivity{
             }
         });
 
-
+        Siren siren = Siren.getInstance(getApplicationContext());
+        siren.setVersionCodeUpdateAlertType(SirenAlertType.FORCE);
+        siren.checkVersion(this, SirenVersionCheckType.IMMEDIATELY, SIREN_JSON_DOCUMENT_URL);
 
 
 }}

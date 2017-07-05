@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/SapContainer.iml" filepath="$PROJECT_DIR$/SapContainer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/digits/digits.iml" filepath="$PROJECT_DIR$/digits/digits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sirenlibrary/sirenlibrary.iml" filepath="$PROJECT_DIR$/sirenlibrary/sirenlibrary.iml" />
     </modules>
   </component>
 </project>

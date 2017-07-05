@@ -1,4 +1,4 @@
-package com.adient.sapcontainer;
+package com.adient.mobility.sapcontainer;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -14,7 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.adient.sapcontainer.utils.FingerprintHandler;
+import com.adient.mobility.sapcontainer.utils.FingerprintHandler;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;

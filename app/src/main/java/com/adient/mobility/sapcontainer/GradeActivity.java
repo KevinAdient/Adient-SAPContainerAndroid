@@ -1,4 +1,4 @@
-package com.adient.sapcontainer;
+package com.adient.mobility.sapcontainer;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.widget.Spinner;
 
 public class GradeActivity extends AppCompatActivity {
     Spinner spinner;
-    String[] grades = {"Select One", "Supplier Quality Dashboard", "Operations Dashboard"};
+    String[] grades = {"Select One", "IRIS Mobile Dashboard", "Operations Dashboard"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

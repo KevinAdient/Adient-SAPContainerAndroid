@@ -1,1 +1,1 @@
-include ':app', ':digits'
+include ':app', ':digits', ':sirenlibrary'

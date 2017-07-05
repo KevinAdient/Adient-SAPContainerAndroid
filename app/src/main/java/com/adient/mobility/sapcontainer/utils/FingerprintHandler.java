@@ -1,4 +1,4 @@
-package com.adient.sapcontainer.utils;
+package com.adient.mobility.sapcontainer.utils;
 
 import android.Manifest;
 import android.app.Activity;
@@ -10,8 +10,8 @@ import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
 import android.widget.TextView;
 
-import com.adient.sapcontainer.GradeActivity;
-import com.adient.sapcontainer.R;
+import com.adient.mobility.sapcontainer.GradeActivity;
+import com.adient.mobility.sapcontainer.R;
 
 /**
  * Created by whit3hawks on 11/16/16.

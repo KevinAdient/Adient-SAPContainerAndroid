@@ -1,4 +1,4 @@
-package com.adient.sapcontainer;
+package com.adient.mobility.sapcontainer;
 
 import org.junit.Test;
 
